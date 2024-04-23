@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.44124061061303604" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.elevatorsimguifinal2.HelloController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="790.0" prefWidth="232.0">
+         <children>
+            <Label layoutX="7.0" layoutY="23.0" text="Number of floors:" />
+            <Button fx:id="StartButton" layoutX="28.0" layoutY="124.0" mnemonicParsing="false" onAction="#onButtonFloorsNun" style="-fx-background-color: #A2A2A2;" text="GENERATE" textAlignment="CENTER" />
+            <TextField fx:id="inputFloors" layoutX="127.0" layoutY="19.0" onAction="#onInputFloors" prefHeight="25.0" prefWidth="73.0" />
+            <Label layoutX="7.0" layoutY="55.0" text="Number of itterations" />
+            <TextField fx:id="iterationsNum" layoutX="127.0" layoutY="51.0" onAction="#onInterationNum" prefHeight="25.0" prefWidth="73.0" />
+            <Label fx:id="ErrorLabel" layoutX="213.0" layoutY="57.0" prefHeight="58.0" prefWidth="126.0" textFill="RED" />
+            <Label layoutX="2.0" layoutY="90.0" text="Number of passengers: " />
+            <TextField fx:id="PassengerInput" layoutX="127.0" layoutY="86.0" prefHeight="25.0" prefWidth="73.0" />
+            <Button fx:id="runBTN" layoutX="122.0" layoutY="124.0" mnemonicParsing="false" onAction="#onRunBTN" style="-fx-background-color: #A2A2A2;" text="RUN" textAlignment="CENTER" />
+            <ScrollPane layoutX="1.0" layoutY="163.0" prefHeight="620.0" prefWidth="370.0">
+               <content>
+                  <VBox fx:id="TIMEvbox" prefHeight="620.0" prefWidth="370.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <ScrollPane prefHeight="766.0" prefWidth="519.0">
+         <content>
+          <AnchorPane fx:id="ElevatorAnchor" minHeight="0.0" minWidth="0.0">
+               <children>
+                  <VBox fx:id="Standard1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Elevator 1" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="Standard2" layoutX="130.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Elevator 2" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="Express1" layoutX="260.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Elevator 3" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="Express2" layoutX="389.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Elevator 4" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+  </items>
+</SplitPane>
